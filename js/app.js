@@ -10,22 +10,32 @@ document.getElementById('calculation').addEventListener('click', function(){
     }else{
         // expenses calculation
     const totalExpenses = parseInt(foodInput) + parseInt(rentInput)+parseInt(clothesInput);
-    document.getElementById('total-expenses').innerText = totalExpenses;
-    const totalBalance= totalIncome-totalExpenses;
-    document.getElementById('balance').innerText = totalBalance;
     
-    // Saving calculation
-    document.getElementById('save-btn').addEventListener('click', function(){
-        // 20% saving calculation
-        const saving = totalIncome*.2;
-        if(saving>totalBalance){
-            window.alert("Wop's!! you hove not enough money for saving");
-        }else{
-            document.getElementById('saving-amount').innerText=saving;
-        document.getElementById('saving-balance').innerText=totalBalance-saving;
-        }
-
-    });
+    if(totalExpenses>totalIncome){
+        window.alert('Your income is so low to your expenses');
+    }else{
+        document.getElementById('total-expenses').innerText = totalExpenses;
+        const totalBalance= totalIncome-totalExpenses;
+        document.getElementById('balance').innerText = totalBalance;
+        // calculation(' ');
+        // Saving calculation
+        document.getElementById('save-btn').addEventListener('click', function(){
+            // 20% saving calculation
+            // const saving = totalIncome*.2;
+            const SaveTaka = document.getElementById('save-money').value;
+            const saveMoney=parseFloat(SaveTaka);
+            const saving=totalIncome*(saveMoney/100);
+            console.log(saving);
+            if(saving>totalBalance){
+                window.alert("Wop's!! you hove not enough money for saving ");
+            }else{
+                document.getElementById('saving-amount').innerText=saving;
+            document.getElementById('saving-balance').innerText=totalBalance-saving;
+            }
+    
+        });
+    }
+    
     }
     
 
