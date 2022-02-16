@@ -37,12 +37,12 @@ document.getElementById('calculation').addEventListener('click', function(){
                 document.getElementById('saving-amount').innerText=saving;
             document.getElementById('saving-balance').innerText=totalBalance-saving;
             }
-    
+
         });
     }
     
     }
-    
+
 
 
 });
