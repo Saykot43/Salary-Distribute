@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary Distribute</title>
+    <!-- Bootstrap Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <h2 class="text-center text-info p-5">Salary Distributes</h2>
+        <h1 class="text-center text-info p-4">Salary Distributes</h1><hr>
         <div class="row gx-5">
             <div class="col-lg-6">
              <div class="p-3 bg-light">
-                 <img class="img-fluid" src="images/money.png" alt="">
+                 <img class="img-fluid custom-img" src="images/money.png" alt="">
              </div>
             </div>
             <div class="col-lg-6">
               <div class="p-3 bg-light">
-                  <h4 class="text-center mb-4">Invoice</h4>
+                  <h4 class="text-center bg-info border border-warning rounded-circle py-3 text-light mb-4">Invoice</h4><hr><br>
                   <div class="text-center">
                     <div class="mt-2 mx-auto col-12 col-md-6">
                         <!-- Total Income -->
@@ -52,13 +53,13 @@
                         <!-- Calculation Button -->
                         <button type="button"  class="btn btn-primary" id="calculation" >Calculate</button>
                         <!-- total expense -->
-                        <h4 class="m-3">Total Expenses : <span id="total-expenses">0</span></h4>
-                        <h4 class="m-3">Balance : <span id="balance">0</span></h4>
+                        <h4 class="m-3">Total Expenses : <span id="total-input">0</span></h4>
+                        <h4 class="m-3">Balance : <span id="balance-input">0</span></h4>
                         <!-- Save money part -->
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Save</span>
                             <input type="number" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-sm" id="save-money" /> <span class="px-3">%</span>
+                                aria-describedby="inputGroup-sizing-sm" id="save-input" /> <span class="px-3">%</span>
                             <button type="button"  class="btn btn-info mx-2 px-2" id="save-btn" >Save Amount</button>
                         </div>
                         <!-- saving money & remaining balance part -->
