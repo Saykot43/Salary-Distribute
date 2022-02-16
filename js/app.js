@@ -1,22 +1,29 @@
+
 document.getElementById('calculation').addEventListener('click', function(){
+
     const totalIncome = document.getElementById('income-input').value;
     const foodInput = document.getElementById('food-input').value;
     const rentInput = document.getElementById('rent-input').value;
     const clothesInput = document.getElementById('clothes-input').value;
+    if (totalIncome<0 || foodInput<0 || rentInput<0 || clothesInput<0){
+        window.alert('please insert positive number');
+    }else{
+        // expenses calculation
     const totalExpenses = parseInt(foodInput) + parseInt(rentInput)+parseInt(clothesInput);
-    const totalExpense = parseInt(totalIncome) - totalExpenses;
     document.getElementById('total-expenses').innerText = totalExpenses;
-    const rBalance= totalIncome-totalExpenses ;
-    
-    document.getElementById('balance').innerText = rBalance;
+    const totalBalance= totalIncome-totalExpenses;
+    document.getElementById('balance').innerText = totalBalance;
     
     // Saving calculation
     document.getElementById('save-btn').addEventListener('click', function(){
-        const saving = rBalance*.2;
+        // 20% saving calculation
+        const saving = totalBalance*.2;
         document.getElementById('saving-amount').innerText=saving;
-        document.getElementById('saving-balance').innerText=rBalance-saving;
+        document.getElementById('saving-balance').innerText=totalBalance-saving;
 
     });
+    }
+    
 
 
 });
