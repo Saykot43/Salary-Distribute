@@ -17,9 +17,13 @@ document.getElementById('calculation').addEventListener('click', function(){
     // Saving calculation
     document.getElementById('save-btn').addEventListener('click', function(){
         // 20% saving calculation
-        const saving = totalBalance*.2;
-        document.getElementById('saving-amount').innerText=saving;
+        const saving = totalIncome*.2;
+        if(saving>totalBalance){
+            window.alert("Wop's!! you hove not enough money for saving");
+        }else{
+            document.getElementById('saving-amount').innerText=saving;
         document.getElementById('saving-balance').innerText=totalBalance-saving;
+        }
 
     });
     }
