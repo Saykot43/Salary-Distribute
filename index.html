@@ -11,12 +11,12 @@
     <div class="container">
         <h2 class="text-center text-info p-5">Salary Distributes</h2>
         <div class="row gx-5">
-            <div class="col">
+            <div class="col-lg-6">
              <div class="p-3 bg-light">
                  <img class="img-fluid" src="images/money.png" alt="">
              </div>
             </div>
-            <div class="col">
+            <div class="col-lg-6">
               <div class="p-3 bg-light">
                   <h4 class="text-center mb-4">Invoice</h4>
                   <div class="text-center">
@@ -50,17 +50,18 @@
                                 aria-describedby="inputGroup-sizing-sm" id="clothes-input" />
                         </div>
                         <!-- Calculation Button -->
-                        <button type="button"  class="btn btn-primary" id="add-details-btn" >Calculate</button>
-                        <h4 class="m-3">Total Expenses : <span id="total-expenses">5555</span></h4>
-                        <h4 class="m-3">Balance : <span id="balance">2000</span></h4>
+                        <button type="button"  class="btn btn-primary" id="calculation" >Calculate</button>
+                        <!-- total expense -->
+                        <h4 class="m-3">Total Expenses : <span id="total-expenses">0</span></h4>
+                        <h4 class="m-3">Balance : <span id="balance">0</span></h4>
                         <!-- Save money part -->
                         <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-text" id="inputGroup-sizing-sm">Save <span id="tax">20</span>%</div>
+                            <div class="input-group-text" id="inputGroup-sizing-sm">Save <span id="save">20</span>%</div>
                             <button type="button"  class="btn btn-info mx-5 px-5" id="save-btn" >Save</button>
                         </div>
                         <!-- saving money & remaining balance part -->
-                        <h5 class="m-3">Saving Amount : <span id="total-expenses">2000</span></h5>
-                        <h5 class="m-3">Remaining Balance : <span id="balance">2500</span></h5>
+                        <h5 class="m-3">Saving Amount : <span id="saving-amount">0</span></h5>
+                        <h5 class="m-3">Remaining Balance : <span id="saving-balance">0</span></h5>
                     </div>
                   </div>
               </div>
