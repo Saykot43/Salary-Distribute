@@ -30,7 +30,7 @@ document.getElementById('calculation').addEventListener('click', function(){
             const saveMoney=parseFloat(SaveTaka);
             const fixedTwo= saveMoney.toFixed(2);
             const saving=totalIncome*(fixedTwo/100);
-            console.log(saving);
+            // console.log(saving);
             if(saving>totalBalance){
                 window.alert("Wop's!! you have not enough money for saving ");
             }else{
