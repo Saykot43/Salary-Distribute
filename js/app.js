@@ -12,7 +12,7 @@ document.getElementById('calculation').addEventListener('click', function(){
         window.alert('please insert positive number');
     }else{
         // expenses calculation
-    const totalExpenses = parseInt(foodInput) + parseInt(rentInput)+parseInt(clothesInput);
+    const totalExpenses = parseFloat(foodInput) + parseFloat(rentInput)+parseFloat(clothesInput);
     
     if(totalExpenses>totalIncome){
         window.alert('Your income is so low to your expenses');
@@ -30,7 +30,6 @@ document.getElementById('calculation').addEventListener('click', function(){
             const saveMoney=parseFloat(SaveTaka);
             const fixedTwo= saveMoney.toFixed(2);
             const saving=totalIncome*(fixedTwo/100);
-            // console.log(saving);
             if(saving>totalBalance){
                 window.alert("Wop's!! you have not enough money for saving ");
             }else{
